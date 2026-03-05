@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PixelForge</title>
+  <meta name="description" content="Kalutara-based duo creating beautiful UX and robust full-stack solutions. SLIIT alumni building scalable digital products."/>
+
+  <!-- Preconnects & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav>
+    <div class="logo">PixelForge</div>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#team">Team</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="btn-contact">Let's Build</a>
+  </nav>
+
+  <section class="hero">
+    <div>
+      <h1>We craft <span class="accent">Digital Experiences</span><br>that scale.</h1>
+      <p>User Friendly UX, clean code, and solid full-stack solutions. We're a duo who love building digital products that work great.</p>
+      <div class="hero-tags">
+        <span class="tag">UI/UX</span>
+        <span class="tag">Front-End</span>
+        <span class="tag">Full-Stack</span>
+        <span class="tag">Hosting</span>
+        <span class="tag">Node</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="section-title">
+      <h2>Featured <span class="highlight">Work</span></h2>
+      <p class="subtitle">Here's what we've built and loved doing it</p>
+    </div>
+
+    <div class="projects-grid">
+      <!-- Example project – replace images & links with your real assets -->
+      <div class="project-card">
+        <img class="project-img" src="./project01.png" alt="Project screenshot">
+        <div class="project-info">
+          <div class="project-tags">
+            <span>Fintech</span>
+            <span>2025</span>
+          </div>
+          <h3>CryptoX</h3>
+          <p>Real-time crypto trading dashboard</p>
+          <a href="https://www.figma.com/proto/..." class="proto-btn">Prototype</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img class="project-img" src="./project02.jpg" alt="Project screenshot">
+        <div class="project-info">
+          <div class="project-tags"><span>E-commerce</span><span>2024</span></div>
+          <h3>Aiden</h3>
+          <p>Motorcycle buy/sell platform</p>
+          <a href="#" class="proto-btn">Prototype</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img class="project-img" src="./project02.jpg" alt="Project screenshot">
+        <div class="project-info">
+          <div class="project-tags"><span>E-commerce</span><span>2024</span></div>
+          <h3>Aiden</h3>
+          <p>Motorcycle buy/sell platform</p>
+          <a href="#" class="proto-btn">Prototype</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img class="project-img" src="./project02.jpg" alt="Project screenshot">
+        <div class="project-info">
+          <div class="project-tags"><span>E-commerce</span><span>2024</span></div>
+          <h3>Aiden</h3>
+          <p>Motorcycle buy/sell platform</p>
+          <a href="#" class="proto-btn">Prototype</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img class="project-img" src="./project02.jpg" alt="Project screenshot">
+        <div class="project-info">
+          <div class="project-tags"><span>E-commerce</span><span>2024</span></div>
+          <h3>Aiden</h3>
+          <p>Motorcycle buy/sell platform</p>
+          <a href="#" class="proto-btn">Prototype</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img class="project-img" src="./project02.jpg" alt="Project screenshot">
+        <div class="project-info">
+          <div class="project-tags"><span>E-commerce</span><span>2024</span></div>
+          <h3>Aiden</h3>
+          <p>Motorcycle buy/sell platform</p>
+          <a href="#" class="proto-btn">Prototype</a>
+        </div>
+      </div>
+
+      <!-- Add the rest of your projects here in the same structure -->
+      <!-- ... -->
+
+    </div>
+  </section>
+
+  <!-- Prototype Modal -->
+  <div id="protoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeProtoModal">×</span>
+      <h2>Prototype Link</h2>
+      <p>Click below to view the interactive prototype (opens in new tab).</p>
+      <a id="protoLink" href="#" target="_blank" rel="noopener noreferrer" class="proto-modal-btn">
+        Open Prototype →
+      </a>
+      <p class="small-note">(If the link doesn't work, copy it manually)</p>
+    </div>
+  </div>
+
+  <section id="process">
+    <div class="section-title">
+      <h2>Our <span class="highlight">Process</span></h2>
+      <p class="subtitle">From idea to live product in simple steps</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-card">
+        <i class="process-icon fas fa-magnifying-glass"></i>
+        <div class="process-num">01</div>
+        <h3>Analyze Business Goals</h3>
+        <p>Goals, users, constraints first.</p>
+      </div>
+      <div class="process-card">
+        <i class="process-icon fas fa-palette"></i>
+        <div class="process-num">02</div>
+        <h3>Create User Friendly Design</h3>
+        <p>Flows → prototypes → feedback.</p>
+      </div>
+      <div class="process-card">
+        <i class="process-icon fas fa-code"></i>
+        <div class="process-num">03</div>
+        <h3>Start Implementation</h3>
+        <p>Clean code, modern stack.</p>
+      </div>
+      <div class="process-card">
+        <i class="process-icon fas fa-rocket"></i>
+        <div class="process-num">04</div>
+        <h3>Launch the Website</h3>
+        <p>Test, deploy, iterate.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="team">
+    <div class="section-title">
+      <h2>Small Team. <span class="highlight">Big Impact.</span></h2>
+      <p class="subtitle">Two SLIIT graduates combining design, frontend & backend expertise.</p>
+    </div>
+
+    <div class="team-grid">
+      <div class="team-member">
+        <img src="./chenura.jpeg" alt="Chenura De Silva">
+        <div class="team-member-content">
+          <h3>Chenura De Silva</h3>
+          <div class="role">UI/UX Designer & Front-End Developer</div>
+          <div class="meta">
+            <span><i class="fas fa-briefcase"></i> SLIIT</span>
+          </div>
+          <div class="social-links">
+            <a href="https://linkedin.com/in/chenura-real-link" class="linkedin-btn" target="_blank">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <img src="./uvindu.jpg" alt="Uvindu Kavishka">
+        <div class="team-member-content">
+          <h3>Uvindu Kavishka</h3>
+          <div class="role">Full-Stack Software Engineer</div>
+          <div class="meta">
+            <span><i class="fas fa-briefcase"></i> SLIIT</span>
+          </div>
+          <div class="social-links">
+            <a href="https://linkedin.com/in/uvindu-real-link" class="linkedin-btn" target="_blank">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="footer-container">
+      <div class="footer-cta">
+        <h2 class="big-cta">Got an <span class="highlight">idea?</span></h2>
+        <a href="mailto:chenura55@gmail.com" class="big-btn">
+          Let's Talk <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="footer-links">
+        <a href="#work">Work</a>
+        <a href="#process">Process</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://twitter.com/yourhandle" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://github.com/yourorg" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/company/pixelforge" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
+
+      <div class="footer-copy">© 2026 PixelForge. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
