@@ -7,7 +7,9 @@ gsap.utils.toArray(".project-card").forEach((card, i) => {
     scrollTrigger: {
       trigger: card,
       start: "top 85%",
-      toggleActions: "play none none reset"
+      // reverse animation when scrolling back up
+      toggleActions: "play reverse play reverse",
+      once: false
     },
     opacity: 1,
     y: 0,
@@ -24,6 +26,8 @@ gsap.utils.toArray(".process-card").forEach((card) => {
     scrollTrigger: {
       trigger: card,
       start: "top 80%",
+      toggleActions: "play reverse play reverse",
+      once: false
     },
     opacity: 1,
     y: 0,
@@ -38,6 +42,8 @@ gsap.utils.toArray(".team-member").forEach((member, i) => {
     scrollTrigger: {
       trigger: member,
       start: "top 85%",
+      toggleActions: "play reverse play reverse",
+      once: false
     },
     opacity: 1,
     y: 0,
@@ -75,6 +81,11 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 
 // Active nav link on scroll
 const sections = document.querySelectorAll('section[id]');
+
+// refresh scroll triggers on resize/zoom to maintain correct positions
+window.addEventListener('resize', () => {
+  ScrollTrigger.refresh();
+});
 window.addEventListener('scroll', () => {
   let current = '';
   sections.forEach(section => {
@@ -90,6 +101,9 @@ window.addEventListener('scroll', () => {
       a.classList.add('active');
     }
   });
+
+  // ensure ScrollTrigger re-evaluates positions during zoom/scroll
+  ScrollTrigger.update();
 });
 
 // Prototype modal logic
